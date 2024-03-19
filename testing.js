@@ -10,10 +10,13 @@ let arrayProducts = new ProductManager();
 
 // test Productos agregados OK
 console.log("Add products");
-arrayProducts.addProduct("producto prueba", "este es un producto prueba", 200, "sin imagen", "abc123", 25);
-arrayProducts.addProduct("producto prueba2", "este es un producto prueba2", 200, "sin imagen", "abc124", 25);
-arrayProducts.addProduct("producto prueba3", "este es un producto prueba3", 200, "sin imagen", "abc125", 25);
-arrayProducts.addProduct("producto prueba4", "este es un producto prueba4", 204, "sin imagen4", "abc126", 24);
+async function AddProducts(){
+await arrayProducts.addProduct("producto prueba", "este es un producto prueba", 200, "sin imagen", "abc123", 25);
+await arrayProducts.addProduct("producto prueba2", "este es un producto prueba2", 200, "sin imagen", "abc124", 25);
+await arrayProducts.addProduct("producto prueba3", "este es un producto prueba3", 200, "sin imagen", "abc125", 25);
+await arrayProducts.addProduct("producto prueba4", "este es un producto prueba4", 204, "sin imagen4", "abc126", 24);
+}
+AddProducts();
 console.log(arrayProducts.getProducts());
 
 // test producto con code repetido

@@ -11,6 +11,10 @@ constructor() {
     this.#products = this.getProductsFromFileAsync();
   }
 
+  async init(){
+    await this.getProductsFromFileAsync();
+  }
+
   // CRUD - Create, Read, Update, Delete
   // Create
 
